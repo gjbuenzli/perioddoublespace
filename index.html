@@ -110,31 +110,49 @@ section{padding:clamp(2.6rem,6vw,4.6rem) 0}
 footer{padding:3rem 0 3.5rem;text-align:center;color:var(--muted);font-size:.85rem}
 footer a{color:var(--muted)}
 .colophon-mark{font-family:'Fraunces',serif;font-style:italic;color:var(--navy)}
+
+/* the double-space gag */
+.spec{display:flex;gap:.55rem;justify-content:center;align-items:flex-end;margin:2rem 0 .5rem}
+.spec .period{font-family:'Fraunces',serif;font-size:clamp(2.4rem,7vw,3.4rem);line-height:.5;color:var(--navy)}
+.spec .space{width:clamp(2.2rem,7vw,3rem);height:clamp(2.2rem,7vw,3rem);border:1.5px dashed var(--brass);border-radius:7px;
+  display:flex;align-items:center;justify-content:center;position:relative}
+.spec .space::after{content:"space";font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:var(--brass-ink);font-family:'Spectral',serif}
+.spec .space.two::before{content:"×2";position:absolute;top:-1.35rem;right:-.2rem;font-family:'Fraunces',serif;font-size:.72rem;color:var(--muted)}
+.spec-cap{text-align:center;font-style:italic;color:var(--muted);font-size:.92rem;margin:.4rem 0 0}
+.strike{text-decoration:line-through;text-decoration-color:var(--brass);text-decoration-thickness:2px;color:var(--muted)}
+.footer-wink{font-style:italic;color:var(--brass-ink);margin-bottom:.4rem}
 </style>
 </head>
 <body>
 <div class="wrap">
 
   <header class="mast">
-    <div class="colophon rise"><span class="label">Independent Press · Est. Denver</span></div>
+    <div class="colophon rise"><span class="label">Independent Press · Rules Optional</span></div>
     <h1 class="mark rise" style="animation-delay:.12s">Period Double Space<span class="dot">.</span></h1>
-    <hr class="rule rise" style="animation-delay:.24s">
-    <p class="lede rise" style="animation-delay:.36s">A small press with a soft spot for true stories, told well.</p>
+    <div class="spec rise" style="animation-delay:.26s" aria-hidden="true">
+      <span class="period">.</span>
+      <span class="space"></span>
+      <span class="space two"></span>
+    </div>
+    <p class="spec-cap rise" style="animation-delay:.36s">The double space in question — the very first rule we broke.</p>
+    <hr class="rule rise" style="animation-delay:.44s">
+    <p class="lede rise" style="animation-delay:.52s">Funny, unconventional books by writers who'd rather be free than correct.</p>
   </header>
 
   <hr class="hr">
 
   <section id="about">
-    <div class="sec-head"><span class="num">01</span><h2>The Press</h2></div>
+    <div class="sec-head"><span class="num">01</span><h2>Why "Double Space"?</h2></div>
     <div class="ethos">
       <div>
-        <p>Period Double Space is a small, independent publisher. We're named for the two spaces that used to follow a period — a quiet nod to careful writing, and to doing things with a little more room to breathe than the world strictly requires.</p>
-        <p>We publish a short list, and we publish it well: true stories with heart and humor, made into books worth keeping on the shelf.</p>
+        <p>For about a century, you put <span class="strike">two spaces</span> after a period. Then, more or less overnight, the rule became one. Writing did not get better. It did not get worse. It turns out those spaces never had a single thing to do with good writing.</p>
+        <p>That's the whole joke — and the whole point. The "rules" of writing (where the spaces go, where the commas land, the words you're forbidden to end a sentence on) are mostly made up, and following them has never once made a book funnier, truer, or harder to put down.</p>
+        <p>So we happily ignore them. We publish the other kind of book: unconventional, laugh-out-loud, gloriously rule-optional true stories by writers brave enough to sound exactly like themselves.</p>
       </div>
       <div class="tenets">
-        <div class="tenet"><b>True stories</b><span>Memoir and narrative nonfiction, chosen for voice.</span></div>
-        <div class="tenet"><b>Made with care</b><span>Edited closely, designed thoughtfully, start to finish.</span></div>
-        <div class="tenet"><b>A short list</b><span>Few books, fully backed — never a catalog for its own sake.</span></div>
+        <div class="tenet"><b>Rules optional</b><span>Grammar has its place. It is not in charge.</span></div>
+        <div class="tenet"><b>Funny on purpose</b><span>If it doesn't make us laugh out loud, we don't publish it.</span></div>
+        <div class="tenet"><b>True to life</b><span>Real stories, told by people who sound like people.</span></div>
       </div>
     </div>
   </section>
@@ -179,14 +197,15 @@ footer a{color:var(--muted)}
   <section id="contact">
     <div class="contact">
       <span class="label" style="color:var(--brass)">Rights, press &amp; submissions</span>
-      <h2>Get in touch</h2>
-      <p>Questions about our books, rights inquiries, or a true story you think we should read?</p>
+      <h2>Say hello</h2>
+      <p>Got a funny true story, a rights question, or strong feelings about the Oxford comma? We're all ears — and we promise not to correct your grammar.</p>
       <a class="mail" href="mailto:contact@perioddoublespace.com">contact@perioddoublespace.com</a>
     </div>
   </section>
 
   <footer>
     <p class="colophon-mark">Period Double Space.</p>
+    <p class="footer-wink">Set with two spaces after every period.&ensp; On purpose.</p>
     © 2026 Period Double Space · Publisher of <a href="https://andthenwehitarock.com" target="_blank" rel="noopener">And Then We Hit a Rock</a>
   </footer>
 
